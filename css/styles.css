@@ -63,11 +63,6 @@ h2 {
   color: rgb(129, 123, 123);
 }
 
-label {
-  font-weight: lighter;
-  color: rgb(129, 123, 123);
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -91,6 +86,7 @@ label {
 .sign_up,
 .newsletter {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   border: 0;
   width: 90%;
@@ -105,9 +101,6 @@ label {
   border-bottom: 2px solid #2D3A45;
 }
 
-.sign_up label {
-  padding: 15px 0 8px;
-}
 
 input[type="text"],
 input[type="email"],
@@ -118,7 +111,7 @@ textarea {
   border: none;
   font-size: 1em;
   height: auto;
-  margin: 0;
+  margin: 10px 0;
   outline: 0;
   padding: 15px;
   width: 100%;
@@ -127,6 +120,12 @@ textarea {
   color: #8f989e;
   box-shadow: 2px 2px 0 rgba(0,0,0,0.03) inset;
   border-radius: 6px;
+}
+
+label {
+  font-weight: lighter;
+  color: rgb(129, 123, 123);
+  padding: 8px 0;
 }
 
 
@@ -139,7 +138,7 @@ textarea {
 }
 
 #zip  {
-  width: 45%;
+  max-width: 30%;
   margin-bottom: 30px;
 }
 
@@ -148,7 +147,8 @@ textarea {
 }
 
 textarea {
-  margin: 10px 0;
+  height: 75px;
+  width: 100%;
 }
 
 button {
@@ -170,6 +170,11 @@ footer {
   padding: 15px 0 60px 0;
 }
 
+.item {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
 
 /* *--------Media Queries-------- */
 
@@ -178,14 +183,50 @@ footer {
 
   .title,
   .form {
-    max-width: 60%;
+    max-width: 650px;
   }
+
 
   .title {
     padding-top: 50px;
   }
 
-  
+  .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+  }
+
+  #zip {
+    max-width: 90px;
+  }
+
+  .item label {
+    width: 25%;
+    margin: 0;
+
+  }
+
+  .item input,
+  select {
+    width: 75%;
+  }
+
+  #state {
+    min-width: 73.5%;
+  }
+
+  .sign_up {
+    padding-bottom: 40px;
+  }
+
+  textarea {
+    min-width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+  }
 
 
 }
