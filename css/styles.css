@@ -109,7 +109,6 @@ input[type="email"],
 input[type="tel"],
 select,
 textarea {
-  background: rgba(255,255,255,0.1);
   border: none;
   font-size: 1em;
   height: auto;
@@ -117,11 +116,18 @@ textarea {
   outline: 0;
   padding: 15px;
   width: 100%;
-  max-width: 400px;
+  max-width: 900px;
   background-color: #e9eff0;
   color: #8f989e;
   box-shadow: 2px 2px 0 rgba(0,0,0,0.03) inset;
   border-radius: 6px;
+  transition: background-color 2s ease-out;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  background-color: rgb(159, 224, 224);
 }
 
 label {
